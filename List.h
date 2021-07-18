@@ -4,7 +4,8 @@ class LinkedList{
 
     public:
         LinkedList();
-        void push(int data);
-        void remove(int data);
+        void insertBefore(int data);
+        void insertAfter(int data);
+        void displayList(void);
         Node *head;    
 };
