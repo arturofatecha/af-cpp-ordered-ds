@@ -6,6 +6,7 @@ class Node{
         int getData(void);
         void setData(int data);
         Node *next;
+        Node *prev;
 
     private:
         int data_;

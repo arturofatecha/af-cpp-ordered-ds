@@ -3,6 +3,7 @@
 #include <queue>
 #include <stack>
 #include "myStack.h"
+#include "myQueue.h"
 
 int main(void){
 
@@ -10,6 +11,7 @@ int main(void){
     std::queue<int> testQueue1;
     std::stack<int> testStack1;
     myStack testStack2 = myStack();
+    myQueue testQueue2 = myQueue();
 
     int i = 0;
 
@@ -67,7 +69,22 @@ int main(void){
     while(!testStack2.isEmpty()){
         std::cout << "Value: " << testStack2.topOfStack() << std::endl;
         testStack2.pop();
-    }   
+    }
+
+    /*FIVE: implementing queue through linked lists */
+    std::cout << "*** FIVE: implementing queue through linked lists" << std::endl;
+    for(i=0;i<10;i++){
+        testQueue2.push(i);
+    }
+
+    std::cout << "Displaying queue implemented through linked list: " << std::endl;
+    std::cout << "Queue Front: " << testQueue2.front->getData() << std::endl;
+    std::cout << "Queue Rear: " << testQueue2.rear->getData() << std::endl;
+
+    while(!testQueue2.isEmpty()){
+        std::cout << "Value: " << testQueue2.front->getData() << std::endl;
+        testQueue2.pop();
+    }
 
     return 0;
 }

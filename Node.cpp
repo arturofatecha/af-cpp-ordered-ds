@@ -3,6 +3,7 @@
 Node::Node(int data){
     data_ = data;
     next = nullptr;
+    prev = nullptr;
     return;
 }
 
